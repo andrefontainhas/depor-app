@@ -1,0 +1,523 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+body.page-loaded {
+  opacity: 1;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  color: #f1f1f1;
+}
+
+body.dark-mode .btn {
+  background-color: #f4d03f;
+  color: #001f4d;
+}
+
+body.dark-mode .btn:hover {
+  background-color: white;
+  color: #001f4d;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  background-color: #001f4d;
+  color: #f4d03f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+header.dark-mode {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+/* Logo */
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Nav */
+.header-center ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav {
+  flex-grow: 1;
+  text-align: center;
+}
+
+#nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #f4d03f;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.nav-link.active {
+  color: white;
+  background-color: #003366;
+  border-radius: 5px;
+}
+
+/* Menú mobile */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.open {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #001f4d;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1rem;
+    color: #f4d03f;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Right Side */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-link {
+  font-size: 1.2rem;
+  color: #f4d03f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.login-link:hover {
+  color: white;
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: #f4d03f;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#darkModeToggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Search Bar */
+.search-container {
+  position: relative;
+}
+
+.search-bar {
+  padding: 0.4rem 1.5rem 0.4rem 0.8rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #f0f0f0;
+}
+
+body.dark-mode .search-bar {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888;
+}
+
+/* Burger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #f4d03f;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-center {
+    display: none;
+  }
+
+  #nav-list.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #001f4d;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  body.dark-mode #nav-list.active {
+    background-color: #1a1a1a;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #003366, #0055aa);
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #f4d03f;
+  color: #001f4d;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #001f4d;
+}
+
+/* Seção Próximos Jogos */
+.proximos-jogos {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+}
+
+.proximos-jogos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #003366;
+}
+
+#jogos-lista {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+#jogos-lista li {
+  background-color: #eeeeee;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#jogos-lista li:hover {
+  background-color: #f4d03f;
+}
+
+/* Adicionando overlay para melhorar a legibilidade do texto */
+#jogos-lista li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+  border-radius: 10px;
+  z-index: 1;
+}
+
+#jogos-lista .jogo-info {
+  position: relative;
+  z-index: 2; /* Coloca o conteúdo acima do overlay */
+  display: flex;
+  flex-direction: column;
+}
+
+#jogos-lista .jogo-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+#jogos-lista .jogo-info p {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+#jogos-lista .jogo-info .jogo-data,
+#jogos-lista .jogo-info .jogo-hora {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#jogos-lista .jogo-local {
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+
+/* Seção Últimas Notícias */
+.noticias {
+  padding: 3rem 2rem;
+  background-color: #f4f4f4;
+}
+
+.noticias h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #003366;
+}
+
+.noticias-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.noticia-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+}
+
+.noticia-card:hover {
+  transform: translateY(-5px);
+}
+
+.noticia-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.noticia-content {
+  padding: 1.5rem;
+}
+
+.noticia-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+.noticia-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.noticia-link {
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.noticia-link:hover {
+  color: #f4d03f;
+}
+
+@media (max-width: 768px) {
+  .noticias-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #001f4d;
+  color: #f4d03f;
+  transition: background-color 0.3s ease;
+}
+
+footer .socials {
+  margin-top: 0.5rem;
+}
+
+footer .socials a {
+  margin: 0 10px;
+  color: #f4d03f;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+footer .socials a:hover {
+  color: white;
+}
+
+footer.dark-mode {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+/* Scroll Animations */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 300px;
+  background-color: #003366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+  

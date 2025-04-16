@@ -1,0 +1,133 @@
+/* equipa.css */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #001f4d;
+  }
+  
+  .main-header {
+    background-color: #001f4d;
+    padding: 1rem 0;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #f4d03f;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    background-color: #f4d03f;
+    color: #001f4d;
+  }
+  
+  .equipa-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #003366;
+  }
+  
+  .categoria-equipa {
+    margin-bottom: 3rem;
+  }
+  
+  .categoria-equipa h2 {
+    font-size: 1.8rem;
+    border-left: 5px solid #003366;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    color: #003366;
+  }
+  
+  .jogadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+  
+  .jogador-card {
+    background: linear-gradient(135deg, #001f4d, #003366);
+    color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .jogador-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .jogador-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #f4d03f;
+  }
+  
+  .jogador-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0.3rem;
+  }
+  
+  .jogador-card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    color: #f4d03f;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: white;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .nav-link {
+      font-size: 0.9rem;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .categoria-equipa h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

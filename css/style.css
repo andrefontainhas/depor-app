@@ -12,7 +12,10 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   opacity: 0;
   transition: opacity 0.6s ease;
+  overflow-x: hidden; /* Remove scroll horizontal */
+  overflow-y: auto;   /* Mantém o scroll vertical se necessário */
 }
+
 
 body.page-loaded {
   opacity: 1;

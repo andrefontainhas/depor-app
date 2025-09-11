@@ -1,0 +1,168 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Header */
+header.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  background-color: #001f4d;
+  color: #f4d03f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.scrolled {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Home button à esquerda */
+.home-button {
+  display: flex;
+  align-items: center;
+}
+
+.home-button img {
+  height: 50px;
+  width: auto;
+}
+
+/* Nav central */
+.main-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: #f4d03f;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #001f4d;
+  background-color: #f4d03f;
+  border-radius: 5px;
+}
+
+.nav-link.active {
+  color: white;
+  background-color: #003366;
+  border-radius: 5px;
+}
+
+/* Resultados */
+.resultados-container {
+  max-width: 900px;
+  margin: 120px auto 50px auto; /* Considerando header fixo */
+  padding: 0 20px;
+}
+
+.resultados-container h1,
+.resultados-container h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.resultados-lista li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+}
+
+.jogo-data {
+  flex-shrink: 0;
+  width: 100px; /* Mantém a data alinhada à esquerda */
+  text-align: left;
+  color: #001f4d;
+}
+
+.club-home {
+  flex: 1;
+  text-align: left;
+  padding-left: 10px;
+  font-weight: normal; /* Sem negrito */
+}
+
+.golos {
+  flex-shrink: 0;
+  width: 80px; /* largura fixa para centralizar os resultados */
+  text-align: center;
+  font-weight: bold;
+  color: #001f4d;
+}
+
+.club-away {
+  flex: 1;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: normal;
+}
+
+/* Destacar "Desportivo de Monção" */
+.resultados-lista li .club-home.special,
+.resultados-lista li .club-away.special {
+  font-weight: bold;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #001f4d;
+  color: #f4d03f;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #nav-list {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #001f4d;
+    padding: 1rem;
+    border-radius: 10px;
+    display: none;
+  }
+
+  #nav-list.active {
+    display: flex;
+  }
+
+  .resultados-container {
+    margin-top: 140px; /* mais espaço para header mobile */
+    padding: 0 10px;
+  }
+}

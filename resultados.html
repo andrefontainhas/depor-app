@@ -26,6 +26,15 @@
     <li><a href="contactos.html" class="nav-link">Contactos</a></li>
   </ul>
 </nav>
+    <div class="header-right">
+      <button id="darkModeToggle">🌙</button>
+      <a href="#" class="login-link">👤</a>
+      <button id="menuToggle" class="menu-toggle">
+        <span class="burger-icon"></span>
+        <span class="burger-icon"></span>
+        <span class="burger-icon"></span>
+      </button>
+    </div>
 
 
 
@@ -75,5 +84,26 @@
     <p>&copy; 2025 Desportivo de Monção. Todos os direitos reservados.</p>
   </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+  const toggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  // Carregar preferência anterior do utilizador
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+  }
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    // Guardar preferência
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
 </body>
 </html>

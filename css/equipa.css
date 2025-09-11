@@ -250,3 +250,63 @@ body.dark-mode .search-bar {
   background-color: #f4d03f;
   transition: all 0.3s ease;
 }
+
+/* ================= DARK MODE ================= */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode header.main-header {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+body.dark-mode .nav-link {
+  color: #f1f1f1;
+}
+
+body.dark-mode .nav-link.active {
+  background-color: #333333;
+  color: #f4d03f;
+}
+
+body.dark-mode .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f4d03f;
+}
+
+body.dark-mode .equipa-section {
+  color: #f1f1f1;
+}
+
+body.dark-mode .section-title {
+  color: #f4d03f;
+}
+
+body.dark-mode .categoria-equipa h2 {
+  border-left: 5px solid #f4d03f;
+  color: #f4d03f;
+}
+
+body.dark-mode .jogador-card {
+  background: linear-gradient(135deg, #1a1a1a, #333333);
+  color: #f1f1f1;
+}
+
+body.dark-mode .jogador-card img {
+  border: 3px solid #f4d03f;
+}
+
+body.dark-mode .social-icons a {
+  color: #f4d03f;
+}
+
+body.dark-mode .social-icons a:hover {
+  color: #ffffff;
+}
+
+body.dark-mode .search-bar {
+  background-color: #2a2a2a;
+  color: white;
+}

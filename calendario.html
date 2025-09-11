@@ -11,22 +11,31 @@
 <body>
 
 <header class="main-header">
-<a href="index.html" class="home-button">
-  <img src="img/depor.png" alt="Home" class="logo" />
-</a>
+  <a href="index.html" class="home-button">
+    <img src="img/depor.png" alt="Home" class="logo" />
+  </a>
 
 
-<nav class="main-nav">
-  <ul id="nav-list">
-    <li><a href="index.html" class="nav-link">Início</a></li>
-    <li><a href="equipa.html" class="nav-link">Equipa</a></li>
-    <li><a href="loja.html" class="nav-link">Loja</a></li>
-    <li><a href="calendario.html" class="nav-link active">Calendário</a></li>
-    <li><a href="resultados.html" class="nav-link">Resultados</a></li>
-    <li><a href="contactos.html" class="nav-link">Contactos</a></li>
-  </ul>
-</nav>
+  <nav class="main-nav">
+    <ul id="nav-list">
+      <li><a href="index.html" class="nav-link">Início</a></li>
+      <li><a href="equipa.html" class="nav-link">Equipa</a></li>
+      <li><a href="loja.html" class="nav-link">Loja</a></li>
+      <li><a href="calendario.html" class="nav-link active">Calendário</a></li>
+      <li><a href="resultados.html" class="nav-link">Resultados</a></li>
+      <li><a href="contactos.html" class="nav-link">Contactos</a></li>
+    </ul>
+  </nav>
 
+        <div class="header-right">
+        <button id="darkModeToggle">🌙</button>
+        <a href="#" class="login-link">👤</a>
+        <button id="menuToggle" class="menu-toggle">
+          <span class="burger-icon"></span>
+          <span class="burger-icon"></span>
+          <span class="burger-icon"></span>
+        </button>
+      </div>
 
 
 </header>
@@ -211,5 +220,26 @@
   <footer>
     <p>&copy; 2025 Desportivo de Monção. Todos os direitos reservados.</p>
   </footer>
+
+      <script>
+  const toggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  // Carregar preferência anterior do utilizador
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+  }
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    // Guardar preferência
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
 </body>
 </html>

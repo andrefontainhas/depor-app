@@ -25,6 +25,16 @@
         <li><a href="contactos.html" class="nav-link active">Contactos</a></li>
       </ul>
     </nav>
+
+        <div class="header-right">
+      <button id="darkModeToggle">🌙</button>
+      <a href="#" class="login-link">👤</a>
+      <button id="menuToggle" class="menu-toggle">
+        <span class="burger-icon"></span>
+        <span class="burger-icon"></span>
+        <span class="burger-icon"></span>
+      </button>
+    </div>
   </header>
 
   <!-- Conteúdo Contactos -->
@@ -34,7 +44,7 @@
     <div class="contactos-info">
       <p><strong>Nome:</strong> Desportivo de Monção</p>
       <p><strong>Alcunhas:</strong> Depor</p>
-      <p><strong>Ano de Fundação:</strong> 1933-03-01</p>
+      <p><strong>Ano de Fundação:</strong> 01-03-1933</p>
       <p><strong>Cidade:</strong> Monção</p>
       <p><strong>País:</strong> Portugal</p>
       <p><strong>Associação:</strong> AF V.Castelo</p>
@@ -66,6 +76,28 @@
   <footer>
     <p>&copy; 2025 Desportivo de Monção. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+  const toggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  // Carregar preferência anterior do utilizador
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+  }
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    // Guardar preferência
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
+
 
 </body>
 </html>

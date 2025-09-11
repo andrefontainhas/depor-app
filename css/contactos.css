@@ -215,3 +215,58 @@ body.dark-mode .search-bar {
   background-color: #f4d03f;
   transition: all 0.3s ease;
 }
+
+/* ================= DARK MODE ================= */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Header */
+body.dark-mode header.main-header {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+body.dark-mode .nav-link {
+  color: #f1f1f1;
+}
+
+body.dark-mode .nav-link.active {
+  background-color: #333;
+  color: #f4d03f;
+}
+
+/* Contactos */
+body.dark-mode .contactos-info {
+  background-color: #2a2a2a;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .contactos-info strong {
+  color: #f4d03f;
+}
+
+body.dark-mode .contactos-info a {
+  color: #f4d03f;
+}
+
+body.dark-mode .contactos-info a:hover {
+  color: #fff;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+/* Search bar no modo escuro */
+body.dark-mode .search-bar {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+body.dark-mode .search-icon {
+  color: #ccc;
+}

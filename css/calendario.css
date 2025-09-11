@@ -299,3 +299,73 @@ body.dark-mode .search-bar {
   background-color: #f4d03f;
   transition: all 0.3s ease;
 }
+
+/* ================= DARK MODE ================= */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode header.main-header {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+body.dark-mode .nav-link {
+  color: #f1f1f1;
+}
+
+body.dark-mode .nav-link.active {
+  background-color: #333333;
+  color: #f4d03f;
+}
+
+body.dark-mode .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f4d03f;
+}
+
+/* Calendário */
+body.dark-mode .calendario-container h1,
+body.dark-mode .calendario-container h2 {
+  color: #f4d03f;
+}
+
+body.dark-mode .calendario-lista li {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode .calendario-lista li strong,
+body.dark-mode .calendario-lista li .special {
+  color: #f4d03f;
+}
+
+body.dark-mode .calendario-lista li .estadio {
+  color: #cccccc;
+}
+
+/* Resultados */
+body.dark-mode .resultados-container h1,
+body.dark-mode .resultados-container h2 {
+  color: #f4d03f;
+}
+
+body.dark-mode .resultados-lista li {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .jogo-data {
+  color: #f4d03f;
+}
+
+body.dark-mode .club-home,
+body.dark-mode .club-away {
+  color: #f1f1f1;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}

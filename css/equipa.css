@@ -1,4 +1,9 @@
 /* equipa.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
     font-family: 'Segoe UI', sans-serif;
@@ -7,39 +12,73 @@ body {
     color: #001f4d;
   }
   
-  .main-header {
+  header.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0.8rem 2rem;
     background-color: #001f4d;
-    padding: 1rem 0;
+    color: #f4d03f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header.scrolled {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+
+  /* Home button à esquerda */
+  .home-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .home-button img {
+    height: 50px;
+    width: auto;
   }
   
-  .main-nav ul {
-    list-style: none;
+  /* Nav central */
+  .main-nav {
+    flex-grow: 1;
     display: flex;
     justify-content: center;
+  }
+
+  #nav-list {
+    display: flex;
     gap: 2rem;
-    margin: 0;
-    padding: 0;
+    list-style: none;
   }
-  
+
   .nav-link {
-    text-decoration: none;
     color: #f4d03f;
+    text-decoration: none;
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
   }
-  
-  .nav-link:hover,
-  .nav-link.active {
-    background-color: #f4d03f;
+
+  .nav-link:hover {
     color: #001f4d;
+    background-color: #f4d03f;
+    border-radius: 5px;
+  }
+
+  .nav-link.active {
+    color: white;
+    background-color: #003366;
+    border-radius: 5px;
   }
   
+  /* Equipa */
   .equipa-section {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
+    padding: 0   20px;
+    max-width: 1100px;
+    margin: 120px auto 50px auto; /* Considerando header fixo */
   }
   
   .section-title {
@@ -78,15 +117,19 @@ body {
   }
   
   .jogador-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.10);
+  }
+  .jogador-card img:hover {
+    transform: scale(1.20);
   }
   
   .jogador-card img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem; /* centraliza horizontalmente + espaço em baixo */
+    display: block; /* garante que margin auto funciona */
     border: 3px solid #f4d03f;
   }
   
@@ -131,3 +174,79 @@ body {
     }
   }
   
+  /* Right Side */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-link {
+  font-size: 1.2rem;
+  color: #f4d03f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.login-link:hover {
+  color: white;
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: #f4d03f;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#darkModeToggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Search Bar */
+.search-container {
+  position: relative;
+}
+
+.search-bar {
+  padding: 0.4rem 1.5rem 0.4rem 0.8rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #f0f0f0;
+}
+
+body.dark-mode .search-bar {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888;
+}
+
+/* Burger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #f4d03f;
+  transition: all 0.3s ease;
+}

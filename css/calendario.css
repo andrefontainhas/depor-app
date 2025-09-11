@@ -20,7 +20,7 @@ header.main-header {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   background-color: #001f4d;
   color: #f4d03f;
   display: flex;
@@ -221,4 +221,81 @@ footer {
     margin-top: 140px; /* mais espaço para header mobile */
     padding: 0 10px;
   }
+}
+
+  /* Right Side */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-link {
+  font-size: 1.2rem;
+  color: #f4d03f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.login-link:hover {
+  color: white;
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: #f4d03f;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#darkModeToggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Search Bar */
+.search-container {
+  position: relative;
+}
+
+.search-bar {
+  padding: 0.4rem 1.5rem 0.4rem 0.8rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #f0f0f0;
+}
+
+body.dark-mode .search-bar {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888;
+}
+
+/* Burger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #f4d03f;
+  transition: all 0.3s ease;
 }

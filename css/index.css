@@ -16,7 +16,6 @@ body {
   overflow-y: auto;   /* Mantém o scroll vertical se necessário */
 }
 
-
 body.page-loaded {
   opacity: 1;
 }
@@ -47,7 +46,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   background-color: #001f4d;
   color: #f4d03f;
   display: flex;
@@ -295,6 +294,74 @@ body.dark-mode .search-bar {
   color: #001f4d;
 }
 
+/* Slider */
+.hero-slider {
+  position: relative;
+}
+
+.slider-viewport {
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 480px; /* Altura ajustada para combinar com a Imagem 3 */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.6);
+}
+
 /* Seção Próximos Jogos */
 .proximos-jogos {
   padding: 3rem 2rem;
@@ -376,8 +443,6 @@ body.dark-mode .search-bar {
   font-weight: bold;
 }
 
-
-
 /* Seção Últimas Notícias */
 .noticias {
   padding: 3rem 2rem;
@@ -414,7 +479,7 @@ body.dark-mode .search-bar {
 
 .noticia-img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -492,43 +557,3 @@ footer.dark-mode {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Slider */
-.slider-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  flex: 0 0 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  height: 450px; /* Altura ajustada para combinar com a Imagem 3 */
-}
-
-.slide img {
-  width: 100%;
-  height: 100%; /* Força a imagem a ocupar toda a altura do slide */
-  object-fit: cover; /* Mantém proporção e corta o excesso */
-  display: block;
-}
-
-.slide-caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  z-index: 2;
-  color: #fff;
-  background-color: rgba(0,0,0,0.5);
-  padding: 15px;
-  border-radius: 8px;
-  max-width: 80%;
-}
-
-
-
-
-  

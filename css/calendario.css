@@ -216,6 +216,8 @@ footer {
   #nav-list.active {
     display: flex;
   }
+}
+
 
   .resultados-container {
     margin-top: 140px; /* mais espaço para header mobile */

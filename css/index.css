@@ -110,7 +110,12 @@ header.dark-mode {
 }
 
 /* Menú mobile */
+/* Mobile Styles */
 @media (max-width: 768px) {
+  .header-center {
+    display: none;
+  }
+
   #nav-list {
     display: none;
     flex-direction: column;
@@ -126,6 +131,10 @@ header.dark-mode {
 
   #nav-list.active {
     display: flex;
+  }
+
+  body.dark-mode #nav-list {
+    background-color: #1a1a1a;
   }
 
   .nav-link {
@@ -151,11 +160,6 @@ header.dark-mode {
     height: 3px;
     background-color: #f4d03f;
     transition: all 0.3s ease;
-  }
-
-  /* Ocultar nav central */
-  .header-center {
-    display: none;
   }
 }
 

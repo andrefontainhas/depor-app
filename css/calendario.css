@@ -119,14 +119,14 @@ header.scrolled {
 }
 
 .calendario-lista li strong {
-  color: #001f4d;
+  color: #000000;
   font-weight: normal;
 }
 
 .calendario-lista li .special {
   font-weight: bold; /* sempre negrito */
   font-style: normal; /* remove itálico */
-  color: #001f4d;
+  color: #000000;
 }
 
 .calendario-lista li .estadio {

@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const jogosLista = document.querySelector('#jogos-lista');
   const jogos = [
     {
-    timeAdversario: "Vilaverdense",
-    data: "14/09/2025",
+    timeAdversario: "UD Oliveirense",
+    data: "21/09/2025",
     hora: "15:00",
     local: "Estádio Manuel Lima (Monção)",
     backgroundImage: "url('img/jogo-1.jpg')"
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     jogoItem.innerHTML = `
       <div class="jogo-info">
-        <h3>Desportivo de Monção vs ${jogo.timeAdversario}</h3>
+        <h3>${jogo.timeAdversario}</h3>
         <div>
           <p class="jogo-local">${jogo.local}</p>
           <p class="jogo-data">Data: ${jogo.data}</p>

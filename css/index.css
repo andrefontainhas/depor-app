@@ -76,10 +76,13 @@ body.dark-mode .noticia-link {
   color: #fff;
 }
 
-/* FOOTER */
-body.dark-mode footer {
-  background-color: #1a1a1a;
-  color: #fff;
+  /* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #001f4d;
+  color: #f4d03f;
+  transition: background-color 0.3s ease;
 }
 
 /* SOCIAL ICONS */
@@ -362,33 +365,4 @@ header.dark-mode {
 .social-icons a:hover img.social-icon {
   color: #003366;
   transform: scale(1.10);
-}
-
-/* ==================== RESPONSIVO MOBILE ==================== */
-@media (max-width: 768px) {
-  #nav-list {
-    flex-direction: column;       /* menu em coluna */
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-  }
-
-  #nav-list li { text-align: center; }
-
-  #nav-list a {
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
-    display: block;
-    color: #f4d03f;
-  }
-
-  #nav-list a:hover,
-  #nav-list a.active {
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 5px;
-  }
-
-  .header-right {
-    gap: 0.5rem; /* diminui espaço em mobile */
-  }
 }

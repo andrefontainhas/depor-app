@@ -566,6 +566,7 @@ header.dark-mode {
 }
 
 /* ==================== BOTÃO MENU (MOBILE) ==================== */
+/* Botão hamburger */
 #menu-toggle {
   display: none;
   font-size: 2rem;
@@ -573,7 +574,6 @@ header.dark-mode {
   border: none;
   color: #f4d03f;
   cursor: pointer;
-  margin-left: 1rem;
 }
 
 /* ==================== HERO ==================== */
@@ -774,6 +774,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
+    z-index: 1000;
   }
 
   .main-nav.open {
@@ -783,7 +784,6 @@ footer {
   #nav-list {
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem 0;
   }
 
   #nav-list li { text-align: center; }

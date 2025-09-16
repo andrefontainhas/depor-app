@@ -75,21 +75,6 @@ body.dark-mode .noticia-link {
   color: #fff;
 }
 
-  /* Footer */
-footer {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  background-color: #001f4d;
-  color: #f4d03f;
-  transition: background-color 0.3s ease;
-}
-
-/* Footer */
-body.dark-mode footer {
-  background-color: #1a1a1a;
-  color: #f1f1f1;
-}
-
 
 /* ==================== HEADER ==================== */
 header {
@@ -311,6 +296,15 @@ header.dark-mode {
 
 @media (max-width: 768px) {
   .noticias-container { grid-template-columns: 1fr; }
+}
+
+  /* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #001f4d;
+  color: #fff;
+  transition: background-color 0.3s ease;
 }
 
 /* ===== Social Icons ===== */

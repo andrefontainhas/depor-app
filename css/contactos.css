@@ -156,7 +156,7 @@ header.dark-mode {
 }
 
 .contactos-info a:hover {
-  color: #001f4d; /* cor dos links */
+  color: #fff; /* cor dos links */
   text-decoration: underline;
 }
 
@@ -299,10 +299,6 @@ body.dark-mode {
 body.dark-mode .social-media h2,
 body.dark-mode .club-info h2 {
   color: #f4d03f;
-}
-
-body.dark-mode .social-icons img.social-icon {
-  filter: brightness(0.9);
 }
 
 body.dark-mode .club-info {

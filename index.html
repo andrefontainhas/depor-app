@@ -160,29 +160,25 @@
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-  <script>
-    // Menu Toggle
-    const menuToggle = document.getElementById("menuToggle");
-    const navList = document.getElementById("nav-list");
+    <script>
+  const toggle = document.getElementById("darkModeToggle");
+  const body = document.body;
 
-    menuToggle.addEventListener("click", () => {
-      navList.classList.toggle("open");
-    });
+  // Carregar preferência anterior do utilizador
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+  }
 
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
 
-    // Dark Mode Toggle
-    const toggle = document.getElementById("darkModeToggle");
-    const body = document.body;
-
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark-mode");
+    // Guardar preferência
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
     }
-
-    toggle.addEventListener("click", () => {
-      body.classList.toggle("dark-mode");
-      localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
-    });
-
+  });
 </script>
 
 </body>

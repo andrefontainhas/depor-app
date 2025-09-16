@@ -56,7 +56,7 @@ header.dark-mode {
   width: auto;
 }
 
-/* ==================== NAV DESKTOP ==================== */
+/* ==================== NAV ==================== */
 .main-nav {
   flex-grow: 1;
   text-align: center;
@@ -118,25 +118,6 @@ header.dark-mode {
 
 #darkModeToggle:hover {
   transform: rotate(20deg);
-}
-
-/* ==================== HAMBURGER MENU ==================== */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 18px;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.burger-icon {
-  width: 100%;
-  height: 3px;
-  background-color: #f4d03f;
-  border-radius: 2px;
-  transition: all 0.3s ease;
 }
 
 /* ==================== HERO ==================== */
@@ -272,73 +253,31 @@ footer .socials a {
 }
 footer .socials a:hover { color: white; }
 
-/* ==================== MENU HAMBURGER MOBILE ==================== */
+/* ==================== RESPONSIVO MOBILE ==================== */
 @media (max-width: 768px) {
   #nav-list {
-    position: fixed;
-    top: 70px;
-    right: 0;
-    background-color: #001f4d;
-    width: 220px;
-    max-width: 80%;
-    height: 100vh;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem 1rem;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    box-shadow: -2px 0 8px rgba(0,0,0,0.3);
-    z-index: 999;
-    overflow-y: auto;
+    flex-direction: column;       /* menu em coluna */
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
   }
 
-  #nav-list.open { transform: translateX(0); }
-  #nav-list li { text-align: left; }
+  #nav-list li { text-align: center; }
+
   #nav-list a {
     font-size: 1.2rem;
     padding: 0.5rem 0;
     display: block;
     color: #f4d03f;
   }
+
   #nav-list a:hover,
   #nav-list a.active {
     background-color: rgba(255,255,255,0.1);
     border-radius: 5px;
   }
 
-  .menu-toggle { display: flex; }
-}
-
-/* ==================== DARK MODE OVERRIDES ==================== */
-body.dark-mode header { background-color: #1a1a1a; color: #f1f1f1; }
-body.dark-mode .nav-link { color: #f1f1f1; }
-body.dark-mode .nav-link.active { background-color: #333; color: #f4d03f; }
-body.dark-mode .nav-link:hover { background-color: rgba(255,255,255,0.1); color: #f4d03f; }
-body.dark-mode .btn { background-color: #f4d03f; color: #001f4d; }
-body.dark-mode .btn:hover { background-color: #fff; color: #001f4d; }
-body.dark-mode .hero { background: linear-gradient(to right, #0f0f0f, #1a1a1a); color: #f1f1f1; }
-body.dark-mode .hero h1, body.dark-mode .hero p { color: #f4d03f; }
-body.dark-mode .hero-button-container .btn { background-color: #f4d03f; color: #001f4d; }
-body.dark-mode .hero-button-container .btn:hover { background-color: #fff; color: #001f4d; }
-body.dark-mode .slide-caption { background-color: rgba(0,0,0,0.6); color: #f1f1f1; }
-body.dark-mode .noticias { background-color: #1a1a1a; }
-body.dark-mode .noticia-card { background-color: #2a2a2a; }
-body.dark-mode .noticia-content h3 { color: #f4d03f; }
-body.dark-mode .noticia-content p { color: #f1f1f1; }
-body.dark-mode .noticia-link { color: #f4d03f; }
-body.dark-mode .noticia-link:hover { color: #fff; }
-body.dark-mode footer { background-color: #1a1a1a; color: #f1f1f1; }
-body.dark-mode footer .socials a { color: #f1f1f1; }
-body.dark-mode footer .socials a:hover { color: #f4d03f; }
-
-/* ==================== SCROLL ANIMATIONS ==================== */
-.scroll-animation {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.scroll-animation.visible {
-  opacity: 1;
-  transform: translateY(0);
+  .header-right {
+    gap: 0.5rem; /* diminui espaço em mobile */
+  }
 }

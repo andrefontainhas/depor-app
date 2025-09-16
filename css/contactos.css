@@ -106,6 +106,7 @@ header.dark-mode {
   color: white;
 }
 
+/* Dark Mode Button */
 #darkModeToggle {
   font-size: 1.2rem;
   background: none;
@@ -170,8 +171,6 @@ header.dark-mode {
   color: #003366;
   font-weight: bold; 
 }
-
-
 
 /* ================= MAPA ================= */
 .mapa-container {
@@ -261,7 +260,7 @@ body.dark-mode footer {
     color: #ffffff;
   }
 
-    /* Right Side */
+  /* Right Side */
 .header-right {
   display: flex;
   align-items: center;

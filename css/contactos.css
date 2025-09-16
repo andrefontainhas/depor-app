@@ -247,7 +247,6 @@ footer {
 /* Dark mode */
 body.dark-mode footer {
   background-color: #1a1a1a;
-  color: #f1f1f1;
 }
 
   body.dark-mode .social-icons a:hover {
@@ -257,54 +256,6 @@ body.dark-mode footer {
   body.dark-mode .social-icons a {
     color: #ffffff;
   }
-
-/* ===== Social Icons ===== */
-.social-media {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.social-media h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #003366;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.social-icons a {
-  color: #f4d03f;
-  font-size: 1.2rem;
-  transition: color 0.3s, filter 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none; /* remove sublinhado */
-}
-
-.social-icons a:hover {
-  color: #ffffff;
-  transform: scale(1.10);
-}
-
-
-.social-icons img.social-icon {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  display: inline-block;
-  border-radius: 50%; /* opcional, para ficar redondo */
-  transition: filter 0.3s;
-}
-
-.social-icons a:hover img.social-icon {
-  color: #003366;
-  transform: scale(1.10);
-}
 
 /* ===== Club Info ===== */
 .club-info {
@@ -350,11 +301,11 @@ body.dark-mode .club-info h2 {
   color: #f4d03f;
 }
 
-body.dark-mode .social-icons a {
+body.dark-mode .social-icons a:hover {
   color: #f4d03f;
 }
 
-body.dark-mode .social-icons a:hover {
+body.dark-mode .social-icons a {
   color: white;
 }
 

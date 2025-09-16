@@ -117,20 +117,54 @@ header.dark-mode {
     transition: background-color 0.3s ease;
   }
 
-  footer .socials {
-    margin-top: 0.5rem;
-  }
+/* ===== Social Icons ===== */
+.social-media {
+  text-align: center;
+  margin: 2rem 0;
+}
 
-  footer .socials a {
-    margin: 0 10px;
-    color: #f4d03f;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
+.social-media h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #003366;
+}
 
-  footer .socials a:hover {
-    color: white;
-  }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #f4d03f;
+  font-size: 1.2rem;
+  transition: color 0.3s, filter 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* remove sublinhado */
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.10);
+}
+
+
+.social-icons img.social-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 50%; /* opcional, para ficar redondo */
+  transition: filter 0.3s;
+}
+
+.social-icons a:hover img.social-icon {
+  color: #003366;
+  transform: scale(1.10);
+}
+
 
   footer.dark-mode {
     background-color: #1a1a1a;
@@ -142,21 +176,19 @@ header.dark-mode {
   color: #f1f1f1;
   }
 
-  body.dark-mode footer .socials a {
-    color: #f1f1f1;
-  }
   body.dark-mode footer {
   background-color: #1a1a1a;
   color: #f1f1f1;
   }
 
-  body.dark-mode footer .socials a {
-    color: #f1f1f1;
-  }
-
-  body.dark-mode footer .socials a:hover {
+  body.dark-mode .social-icons a:hover {
     color: #f4d03f;
   }
+
+  body.dark-mode .social-icons a {
+    color: #ffffff;
+  }
+
 /* Calendário */
 .calendario-container {
   max-width: 1100px;

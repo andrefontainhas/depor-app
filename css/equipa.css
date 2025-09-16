@@ -46,21 +46,52 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-footer .socials {
-  margin-top: 0.5rem;
+/* ===== Social Icons ===== */
+.social-media {
+  text-align: center;
+  margin: 2rem 0;
 }
 
-footer .socials a {
-  margin: 0 10px;
+.social-media h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons a {
   color: #f4d03f;
-  font-weight: bold;
-  transition: color 0.3s;
-  text-decoration: none; /* Remove sublinhado */
+  font-size: 1.2rem;
+  transition: color 0.3s, filter 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* remove sublinhado */
 }
 
-footer .socials a:hover {
-  color: white;
-  text-decoration: none; /* Garante que não aparece sublinhado ao passar o mouse */
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.10);
+}
+
+
+.social-icons img.social-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 50%; /* opcional, para ficar redondo */
+  transition: filter 0.3s;
+}
+
+.social-icons a:hover img.social-icon {
+  color: #003366;
+  transform: scale(1.10);
 }
 
 /* Dark mode */
@@ -75,7 +106,7 @@ body.dark-mode footer .socials a {
 }
 
 body.dark-mode footer .socials a:hover {
-  color: #f4d03f;
+  color: #f1f1f1;
   text-decoration: none; /* Remove sublinhado no hover do dark mode */
 }
 
@@ -272,26 +303,6 @@ body.dark-mode footer .socials a:hover {
   transform: rotate(20deg);
 }
 
-
-
-/* Burger menu */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.burger-icon {
-  width: 25px;
-  height: 3px;
-  background-color: #f4d03f;
-  transition: all 0.3s ease;
-}
-
 /* ================= DARK MODE ================= */
 body.dark-mode {
   background-color: #121212;
@@ -339,11 +350,11 @@ body.dark-mode .jogador-card img {
   border: 3px solid #f4d03f;
 }
 
-body.dark-mode .social-icons a {
+body.dark-mode .social-icons a:hover {
   color: #f4d03f;
 }
 
-body.dark-mode .social-icons a:hover {
+body.dark-mode .social-icons a {
   color: #ffffff;
 }
 

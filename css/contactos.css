@@ -199,21 +199,52 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-footer .socials {
-  margin-top: 0.5rem;
+/* ===== Social Icons ===== */
+.social-media {
+  text-align: center;
+  margin: 2rem 0;
 }
 
-footer .socials a {
-  margin: 0 10px;
+.social-media h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons a {
   color: #f4d03f;
-  font-weight: bold;
-  transition: color 0.3s;
-  text-decoration: none; /* Remove sublinhado */
+  font-size: 1.2rem;
+  transition: color 0.3s, filter 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* remove sublinhado */
 }
 
-footer .socials a:hover {
-  color: white;
-  text-decoration: none; /* Garante que não aparece sublinhado ao passar o mouse */
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.10);
+}
+
+
+.social-icons img.social-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 50%; /* opcional, para ficar redondo */
+  transition: filter 0.3s;
+}
+
+.social-icons a:hover img.social-icon {
+  color: #003366;
+  transform: scale(1.10);
 }
 
 /* Dark mode */
@@ -222,15 +253,13 @@ body.dark-mode footer {
   color: #f1f1f1;
 }
 
-body.dark-mode footer .socials a {
-  color: #f1f1f1;
-  text-decoration: none; /* Remove sublinhado no dark mode */
-}
+  body.dark-mode .social-icons a:hover {
+    color: #f4d03f;
+  }
 
-body.dark-mode footer .socials a:hover {
-  color: #f4d03f;
-  text-decoration: none; /* Remove sublinhado no hover do dark mode */
-}
+  body.dark-mode .social-icons a {
+    color: #ffffff;
+  }
 
     /* Right Side */
 .header-right {
@@ -282,7 +311,7 @@ body.dark-mode footer .socials a:hover {
 }
 
 .social-icons a {
-  color: #003366;
+  color: #f4d03f;
   font-size: 1.2rem;
   transition: color 0.3s, filter 0.3s;
   display: flex;
@@ -292,7 +321,7 @@ body.dark-mode footer .socials a:hover {
 }
 
 .social-icons a:hover {
-  color: #003366;
+  color: #ffffff;
   transform: scale(1.10);
 }
 
@@ -310,7 +339,6 @@ body.dark-mode footer .socials a:hover {
   color: #003366;
   transform: scale(1.10);
 }
-
 
 /* ===== Club Info ===== */
 .club-info {

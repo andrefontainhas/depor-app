@@ -17,7 +17,7 @@
     <img src="img/depor.png" alt="Logo Desportivo de Monção" class="logo" />
   </div>
 
-  <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+  
 
   <nav class="main-nav">
     <ul id="nav-list">
@@ -159,36 +159,29 @@
   </footer>
 
 
-   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-  <script>
-    const toggle = document.getElementById("darkModeToggle");
-    const body = document.body;
+    <script>
+  const toggle = document.getElementById("darkModeToggle");
+  const body = document.body;
 
-    // Carregar preferência anterior do utilizador
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark-mode");
+  // Carregar preferência anterior do utilizador
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+  }
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    // Guardar preferência
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
     }
-
-    toggle.addEventListener("click", () => {
-      body.classList.toggle("dark-mode");
-
-      // Guardar preferência
-      if (body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-      } else {
-        localStorage.setItem("theme", "light");
-      }
-    });
-
-    const menuToggle = document.getElementById("menu-toggle");
-    const nav = document.querySelector(".main-nav");
-
-    menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-    });
-
-  </script>
+  });
+</script>
 
 </body>
 </html>

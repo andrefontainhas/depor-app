@@ -1,4 +1,4 @@
-/* Reset */
+/* ==================== RESET ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -9,11 +9,23 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
   color: #1a1a1a;
-  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-/* ================= HEADER ================= */
-header.main-header {
+body.page-loaded {
+  opacity: 1;
+}
+
+/* ==================== DARK MODE ==================== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* ==================== HEADER ==================== */
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -25,43 +37,48 @@ header.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Logo como botão home */
-header .logo {
-  display: flex;
-  align-items: center;
+header.scrolled {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
-.home-button img {
+header.dark-mode {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+/* ==================== LOGO ==================== */
+.logo {
   height: 50px;
   width: auto;
 }
-/* Nav central */
+
+/* ==================== NAV ==================== */
 .main-nav {
   flex-grow: 1;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 #nav-list {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
   list-style: none;
+  gap: 2rem;
 }
 
 .nav-link {
-  color: #f4d03f;
   text-decoration: none;
+  color: #f4d03f;
   font-weight: bold;
   padding: 0.5rem;
   transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #001f4d;
-  background-color: #f4d03f;
+  color: white;
+  background-color: rgba(0,0,0,0.2);
   border-radius: 5px;
 }
 
@@ -69,6 +86,37 @@ header .logo {
   color: white;
   background-color: #003366;
   border-radius: 5px;
+}
+
+/* ==================== HEADER RIGHT ==================== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-link {
+  font-size: 1.2rem;
+  color: #f4d03f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.login-link:hover {
+  color: white;
+}
+
+#darkModeToggle {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: #f4d03f;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#darkModeToggle:hover {
+  transform: rotate(20deg);
 }
 
 /* ================= CONTACTOS ================= */

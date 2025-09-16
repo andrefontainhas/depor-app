@@ -11,10 +11,14 @@ body {
   color: #1a1a1a;
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
+  overflow-y: auto;
+}
+body.page-loaded {
+  opacity: 1;
 }
 
-/* Header */
-header.main-header {
+/* ==================== HEADER ==================== */
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -26,19 +30,20 @@ header.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 header.scrolled {
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
-/* Home button à esquerda */
-.home-button {
-  display: flex;
-  align-items: center;
+header.dark-mode {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
 }
 
-.home-button img {
+/* ==================== LOGO ==================== */
+.logo {
   height: 50px;
   width: auto;
 }

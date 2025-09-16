@@ -109,60 +109,6 @@ header.dark-mode {
   border-radius: 5px;
 }
 
-/* Menú mobile */
-/* Mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .main-nav {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: white;
-    width: 200px;
-    flex-direction: column;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    padding: 20px;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-  }
-
-  /* Abrir menu quando checkbox estiver marcado */
-  .menu-checkbox:checked + .menu-toggle + .main-nav {
-    transform: translateX(0);
-  }
-}
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-
-  .nav-menu.open {
-    display: block;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #001f4d;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .nav-menu a {
-    display: block;
-    padding: 1rem;
-    color: #f4d03f;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .nav-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-}
-
 /* Right Side */
 .header-right {
   display: flex;
@@ -195,85 +141,7 @@ header.dark-mode {
   transform: rotate(20deg);
 }
 
-/* Search Bar */
-.search-container {
-  position: relative;
-}
-
-.search-bar {
-  padding: 0.4rem 1.5rem 0.4rem 0.8rem;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  background-color: #f0f0f0;
-}
-
-body.dark-mode .search-bar {
-  background-color: #2a2a2a;
-  color: white;
-}
-
-.search-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #888;
-}
-
 /* Burger menu */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.burger-icon {
-  width: 100%;
-  height: 3px;
-  background-color: #000;
-  border-radius: 2px;
-}
-
-/* Checkbox escondido */
-.menu-checkbox {
-  display: none;
-}
-
-/* Nav desktop */
-.main-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .header-center {
-    display: none;
-  }
-
-  #nav-list.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: #001f4d;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  }
-
-  body.dark-mode #nav-list.active {
-    background-color: #1a1a1a;
-  }
-
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -281,13 +149,26 @@ body.dark-mode .search-bar {
   width: 25px;
   height: 18px;
   cursor: pointer;
+  z-index: 1001;
 }
+
+.burger-icon {
+  width: 100%;
+  height: 3px;
+  background-color: #f4d03f;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Checkbox escondido */
+.menu-checkbox {
+  display: none;
 }
 
 /* Hero section */
 .hero {
   position: relative;
-  padding: 6rem 2rem 2rem 2rem; /* topo 6rem, direita 2rem, inferior 2rem, esquerda 2rem */
+  padding: 6rem 2rem 2rem 2rem;
   text-align: center;
   background: linear-gradient(to right, #003366, #0055aa);
   color: white;
@@ -343,16 +224,15 @@ body.dark-mode .search-bar {
 .slider-viewport {
   overflow: hidden;
 }
-/* Reduz a segunda e terceira imagem do slider */
+
 .slide:nth-of-type(1) img,
 .slide:nth-of-type(2) img,
 .slide:nth-of-type(3) img {
-  width: 50%;        /* metade da largura do container */
-  height: auto;      /* mantém proporção */
-  max-width: none;   /* remove restrição de largura */
+  width: 50%;
+  height: auto;
+  max-width: none;
   object-fit: contain;
 }
-
 
 .slider-track {
   display: flex;
@@ -363,24 +243,23 @@ body.dark-mode .search-bar {
 .slide {
   flex: 0 0 100%;
   display: flex;
-  flex-direction: column;       /* empilha imagem + legenda verticalmente */
-  align-items: center;          /* centraliza horizontalmente */
+  flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
-  padding-top: 30px; /* aumenta espaço acima da imagem do slide */
-  padding-bottom: 0; /* remove espaço extra abaixo da imagem */
+  padding-top: 30px;
+  padding-bottom: 0;
 }
 
 .slide img {
-  width: auto;                  /* usa largura real */
-  height: auto;                 /* usa altura real */
-  max-width: 100%;              /* não ultrapassa container */
-  max-height: none;             /* sem limite de altura */
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
   display: block;
-  object-fit: contain;          /* mantém proporção sem cortar */
-  margin-bottom: 10px;          /* espaço entre imagem e legenda */
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
-/* Caption sempre abaixo da imagem */
 .slide-caption {
   color: #fff;
   background-color: rgba(0,0,0,0.5);
@@ -392,25 +271,6 @@ body.dark-mode .search-bar {
   word-wrap: break-word;
 }
 
-/* Botões do slider */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.slider-btn.prev { left: 10px; }
-.slider-btn.next { right: 10px; }
-
-.slider-btn:hover { background: rgba(0,0,0,0.6); }
-
 @media (max-width: 768px) {
   .slide-caption {
     max-width: 90%;
@@ -419,7 +279,7 @@ body.dark-mode .search-bar {
   }
 }
 
-/* Seção Últimas Notícias */
+/* Últimas Notícias */
 .noticias {
   padding: 3rem 2rem;
   background-color: #f4f4f4;
@@ -454,14 +314,13 @@ body.dark-mode .search-bar {
 }
 
 .noticia-img {
-  width: 100%;           /* ocupa toda a largura do card */
-  height: auto;          /* mantém proporção real */
-  max-height: 300px;     /* opcional: limita altura máxima */
-  object-fit: contain;   /* mantém proporção inteira, sem cortar */
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
-
 
 .noticia-content {
   padding: 1.5rem;
@@ -515,31 +374,61 @@ footer .socials a {
   color: #f4d03f;
   font-weight: bold;
   transition: color 0.3s;
-  text-decoration: none; /* Remove sublinhado */
+  text-decoration: none;
 }
 
 footer .socials a:hover {
   color: white;
 }
 
-footer.dark-mode {
-  background-color: #1a1a1a;
-  color: #f1f1f1;
+/* ==================== MENU HAMBURGER MOBILE ==================== */
+@media (max-width: 768px) {
+  #nav-list {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    background-color: #001f4d;
+    width: 220px;
+    max-width: 80%;
+    height: 100vh;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  #nav-list li {
+    text-align: left;
+  }
+
+  #nav-list a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    display: block;
+    color: #f4d03f;
+  }
+
+  #nav-list a:hover,
+  #nav-list a.active {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+  }
+
+  /* Mostrar nav quando checkbox marcado */
+  .menu-checkbox:checked + .menu-toggle + #nav-list {
+    transform: translateX(0);
+  }
+
+  .main-nav {
+    display: block;
+  }
 }
 
-/* Scroll Animations */
-.scroll-animation {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.scroll-animation.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= DARK MODE ================= */
+/* ==================== DARK MODE ==================== */
 body.dark-mode {
   background-color: #121212;
   color: #f1f1f1;
@@ -564,16 +453,6 @@ body.dark-mode .nav-link:hover {
   color: #f4d03f;
 }
 
-body.dark-mode .search-bar {
-  background-color: #2a2a2a;
-  color: white;
-}
-
-body.dark-mode .hero {
-  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
-  color: #f1f1f1;
-}
-
 body.dark-mode .btn {
   background-color: #f4d03f;
   color: #001f4d;
@@ -584,34 +463,6 @@ body.dark-mode .btn:hover {
   color: #001f4d;
 }
 
-body.dark-mode .proximos-jogos {
-  background-color: #1e1e1e;
-}
-
-body.dark-mode #jogos-lista li {
-  background-color: #2a2a2a;
-}
-
-body.dark-mode .noticias {
-  background-color: #1a1a1a;
-}
-
-body.dark-mode .noticia-card {
-  background-color: #2a2a2a;
-}
-
-body.dark-mode .noticia-content h3 {
-  color: #f4d03f;
-}
-
-body.dark-mode footer {
-  background-color: #1a1a1a;
-  color: #f1f1f1;
-}
-
-body.dark-mode footer .socials a {
-  color: #f1f1f1;
-}
 body.dark-mode .hero {
   background: linear-gradient(to right, #0f0f0f, #1a1a1a);
   color: #f1f1f1;
@@ -619,7 +470,7 @@ body.dark-mode .hero {
 
 body.dark-mode .hero h1,
 body.dark-mode .hero p {
-  color: #f4d03f; /* Títulos e textos do hero em amarelo */
+  color: #f4d03f;
 }
 
 body.dark-mode .hero-button-container .btn {
@@ -633,16 +484,13 @@ body.dark-mode .hero-button-container .btn:hover {
 }
 
 body.dark-mode .slide-caption {
-  background-color: rgba(0,0,0,0.6); /* fundo das legendas mais escuro */
+  background-color: rgba(0,0,0,0.6);
   color: #f1f1f1;
 }
+
 body.dark-mode .noticias {
   background-color: #1a1a1a;
 }
-body.dark-mode .noticias h2 {
-  color: #f4d03f; /* Amarelo para manter contraste com fundo escuro */
-}
-
 
 body.dark-mode .noticia-card {
   background-color: #2a2a2a;
@@ -663,6 +511,7 @@ body.dark-mode .noticia-link {
 body.dark-mode .noticia-link:hover {
   color: #ffffff;
 }
+
 body.dark-mode footer {
   background-color: #1a1a1a;
   color: #f1f1f1;
@@ -670,32 +519,21 @@ body.dark-mode footer {
 
 body.dark-mode footer .socials a {
   color: #f1f1f1;
-  text-decoration: none; /* Remove sublinhado */
+  text-decoration: none;
 }
 
 body.dark-mode footer .socials a:hover {
   color: #f4d03f;
 }
-body.dark-mode .btn {
-  background-color: #f4d03f;
-  color: #001f4d;
+
+/* Scroll Animations */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-body.dark-mode .btn:hover {
-  background-color: #ffffff;
-  color: #001f4d;
-}
-
-body.dark-mode .nav-link {
-  color: #f1f1f1;
-}
-
-body.dark-mode .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #f4d03f;
-}
-
-body.dark-mode .nav-link.active {
-  color: #f4d03f;
-  background-color: #333333;
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

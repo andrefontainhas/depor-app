@@ -17,19 +17,6 @@
     <img src="img/depor.png" alt="Logo Desportivo de Monção" class="logo" />
   </div>
 
-  <!-- Checkbox escondida -->
-  <input type="checkbox" id="menuCheckbox" class="menu-checkbox" />
-
-  <!-- Hamburger -->
-  <label for="menuCheckbox" class="menu-toggle">
-    <span class="burger-icon"></span>
-    <span class="burger-icon"></span>
-    <span class="burger-icon"></span>
-  </label>
-  <input type="checkbox" id="menuCheckbox" class="menu-checkbox" />
-
-
-  <!-- Nav -->
   <nav class="main-nav">
     <ul id="nav-list">
       <li><a href="index.html" class="nav-link active">Início</a></li>
@@ -40,15 +27,17 @@
     </ul>
   </nav>
 
-
-  <!-- Right side -->
+  <!-- Right side: dark mode, login, menu -->
   <div class="header-right">
     <button id="darkModeToggle">🌙</button>
     <a href="#" class="login-link">👤</a>
+    <button id="menuToggle" class="menu-toggle">
+      <span class="burger-icon"></span>
+      <span class="burger-icon"></span>
+      <span class="burger-icon"></span>
+    </button>
   </div>
 </header>
-
-
 
   <!-- Hero Section -->
 <section class="hero">
@@ -170,27 +159,29 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   <script>
-  const toggle = document.getElementById("darkModeToggle");
-  const body = document.body;
+    // Menu Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const navList = document.getElementById("nav-list");
 
-  // Carregar preferência anterior do utilizador
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-  }
+    menuToggle.addEventListener("click", () => {
+      navList.classList.toggle("open");
+    });
 
-  toggle.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
+    // Dark Mode Toggle
+    const toggle = document.getElementById("darkModeToggle");
+    const body = document.body;
 
-    // Guardar preferência
-    if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.setItem("theme", "light");
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
     }
-  });
-</script>
+
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    });
 
 </script>
+
 </body>
 </html>
 

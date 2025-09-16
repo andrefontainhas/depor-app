@@ -1,4 +1,4 @@
-/* Reset */
+/* ==================== RESET ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -11,20 +11,21 @@ body {
   color: #1a1a1a;
   transition: background-color 0.3s ease, color 0.3s ease;
   opacity: 0;
-  overflow-x: hidden; /* Remove scroll horizontal */
-  overflow-y: auto;   /* Mantém scroll vertical */
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body.page-loaded {
   opacity: 1;
 }
 
+/* ==================== DARK MODE ==================== */
 body.dark-mode {
   background-color: #121212;
   color: #f1f1f1;
 }
 
-/* Header */
+/* ==================== HEADER ==================== */
 header {
   position: fixed;
   top: 0;
@@ -41,7 +42,7 @@ header {
 }
 
 header.scrolled {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 header.dark-mode {
@@ -49,13 +50,13 @@ header.dark-mode {
   color: #f1f1f1;
 }
 
-/* Logo */
+/* ==================== LOGO ==================== */
 .logo {
   height: 50px;
   width: auto;
 }
 
-/* Nav desktop */
+/* ==================== NAV DESKTOP ==================== */
 .main-nav {
   flex-grow: 1;
   text-align: center;
@@ -78,7 +79,7 @@ header.dark-mode {
 
 .nav-link:hover {
   color: white;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0,0,0,0.2);
   border-radius: 5px;
 }
 
@@ -88,7 +89,7 @@ header.dark-mode {
   border-radius: 5px;
 }
 
-/* Right side */
+/* ==================== HEADER RIGHT ==================== */
 .header-right {
   display: flex;
   align-items: center;
@@ -106,7 +107,6 @@ header.dark-mode {
   color: white;
 }
 
-/* Dark mode toggle */
 #darkModeToggle {
   font-size: 1.2rem;
   background: none;
@@ -120,7 +120,7 @@ header.dark-mode {
   transform: rotate(20deg);
 }
 
-/* Hamburger menu */
+/* ==================== HAMBURGER MENU ==================== */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -139,11 +139,7 @@ header.dark-mode {
   transition: all 0.3s ease;
 }
 
-.menu-checkbox {
-  display: none;
-}
-
-/* Hero section */
+/* ==================== HERO ==================== */
 .hero {
   position: relative;
   padding: 6rem 2rem 2rem 2rem;
@@ -190,21 +186,10 @@ header.dark-mode {
   background-color: #003366;
 }
 
-/* Slider */
-.hero-slider {
-  position: relative;
-}
-
-.slider-viewport {
-  overflow: hidden;
-}
-
-.slider-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-}
-
+/* ==================== SLIDER ==================== */
+.hero-slider { position: relative; }
+.slider-viewport { overflow: hidden; }
+.slider-track { display: flex; transition: transform 0.5s ease-in-out; width: 100%; }
 .slide {
   flex: 0 0 100%;
   display: flex;
@@ -213,17 +198,7 @@ header.dark-mode {
   justify-content: flex-start;
   padding-top: 30px;
 }
-
-.slide img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: none;
-  display: block;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
+.slide img { width: auto; max-width: 100%; object-fit: contain; margin-bottom: 10px; }
 .slide-caption {
   color: #fff;
   background-color: rgba(0,0,0,0.5);
@@ -234,14 +209,10 @@ header.dark-mode {
 }
 
 @media (max-width: 768px) {
-  .slide-caption {
-    max-width: 90%;
-    font-size: 0.9rem;
-    padding: 10px;
-  }
+  .slide-caption { max-width: 90%; font-size: 0.9rem; padding: 10px; }
 }
 
-/* Últimas Notícias */
+/* ==================== NOTÍCIAS ==================== */
 .noticias {
   padding: 3rem 2rem;
   background-color: #f4f4f4;
@@ -265,7 +236,7 @@ header.dark-mode {
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   width: 100%;
   max-width: 350px;
@@ -273,43 +244,18 @@ header.dark-mode {
 
 .noticia-card:hover { transform: translateY(-5px); }
 
-.noticia-img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: contain;
-}
-
-.noticia-content {
-  padding: 1.5rem;
-}
-
-.noticia-content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #003366;
-}
-
-.noticia-content p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-.noticia-link {
-  text-decoration: none;
-  color: #003366;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
+.noticia-img { width: 100%; max-height: 300px; object-fit: contain; }
+.noticia-content { padding: 1.5rem; }
+.noticia-content h3 { font-size: 1.8rem; margin-bottom: 1rem; color: #003366; }
+.noticia-content p { font-size: 1rem; color: #555; margin-bottom: 1.5rem; }
+.noticia-link { text-decoration: none; color: #003366; font-weight: bold; font-size: 1.1rem; }
 .noticia-link:hover { color: #f4d03f; }
 
 @media (max-width: 768px) {
   .noticias-container { grid-template-columns: 1fr; }
 }
 
-/* Footer */
+/* ==================== FOOTER ==================== */
 footer {
   text-align: center;
   padding: 1.5rem 1rem;
@@ -318,26 +264,23 @@ footer {
 }
 
 footer .socials { margin-top: 0.5rem; }
-
 footer .socials a {
   margin: 0 10px;
   color: #f4d03f;
   font-weight: bold;
   text-decoration: none;
 }
-
 footer .socials a:hover { color: white; }
 
 /* ==================== MENU HAMBURGER MOBILE ==================== */
 @media (max-width: 768px) {
-  .header-center { display: none; }
-
   #nav-list {
     position: fixed;
     top: 70px;
     right: 0;
     background-color: #001f4d;
     width: 220px;
+    max-width: 80%;
     height: 100vh;
     flex-direction: column;
     gap: 1.5rem;
@@ -349,6 +292,7 @@ footer .socials a:hover { color: white; }
     overflow-y: auto;
   }
 
+  #nav-list.open { transform: translateX(0); }
   #nav-list li { text-align: left; }
   #nav-list a {
     font-size: 1.2rem;
@@ -356,54 +300,38 @@ footer .socials a:hover { color: white; }
     display: block;
     color: #f4d03f;
   }
-
   #nav-list a:hover,
   #nav-list a.active {
     background-color: rgba(255,255,255,0.1);
     border-radius: 5px;
   }
 
-  /* Checkbox: mostrar nav quando marcado */
-  .menu-checkbox:checked + .menu-toggle + #nav-list {
-    transform: translateX(0);
-}
-
   .menu-toggle { display: flex; }
 }
 
-/* ==================== DARK MODE ==================== */
-body.dark-mode {
-  background-color: #121212;
-  color: #f1f1f1;
-}
-
+/* ==================== DARK MODE OVERRIDES ==================== */
 body.dark-mode header { background-color: #1a1a1a; color: #f1f1f1; }
 body.dark-mode .nav-link { color: #f1f1f1; }
 body.dark-mode .nav-link.active { background-color: #333; color: #f4d03f; }
 body.dark-mode .nav-link:hover { background-color: rgba(255,255,255,0.1); color: #f4d03f; }
-
 body.dark-mode .btn { background-color: #f4d03f; color: #001f4d; }
 body.dark-mode .btn:hover { background-color: #fff; color: #001f4d; }
-
 body.dark-mode .hero { background: linear-gradient(to right, #0f0f0f, #1a1a1a); color: #f1f1f1; }
 body.dark-mode .hero h1, body.dark-mode .hero p { color: #f4d03f; }
 body.dark-mode .hero-button-container .btn { background-color: #f4d03f; color: #001f4d; }
 body.dark-mode .hero-button-container .btn:hover { background-color: #fff; color: #001f4d; }
-
 body.dark-mode .slide-caption { background-color: rgba(0,0,0,0.6); color: #f1f1f1; }
-
 body.dark-mode .noticias { background-color: #1a1a1a; }
 body.dark-mode .noticia-card { background-color: #2a2a2a; }
 body.dark-mode .noticia-content h3 { color: #f4d03f; }
 body.dark-mode .noticia-content p { color: #f1f1f1; }
 body.dark-mode .noticia-link { color: #f4d03f; }
 body.dark-mode .noticia-link:hover { color: #fff; }
-
 body.dark-mode footer { background-color: #1a1a1a; color: #f1f1f1; }
-body.dark-mode footer .socials a { color: #f1f1f1; text-decoration: none; }
+body.dark-mode footer .socials a { color: #f1f1f1; }
 body.dark-mode footer .socials a:hover { color: #f4d03f; }
 
-/* Scroll Animations */
+/* ==================== SCROLL ANIMATIONS ==================== */
 .scroll-animation {
   opacity: 0;
   transform: translateY(30px);

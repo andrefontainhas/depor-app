@@ -13,7 +13,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
 body.page-loaded {
   opacity: 1;
 }
@@ -85,16 +84,7 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-/* SOCIAL ICONS */
-body.dark-mode .social-media h2 {
-  color: #f1c40f;
-}
-body.dark-mode .social-icons a:hover {
-  color: #f1c40f;
-}
-body.dark-mode .social-icons a {
-  color: #fff;
-}
+
 
 
 /* ==================== HEADER ==================== */
@@ -352,7 +342,6 @@ header.dark-mode {
   transform: scale(1.10);
 }
 
-
 .social-icons img.social-icon {
   width: 20px;
   height: 20px;
@@ -366,3 +355,16 @@ header.dark-mode {
   color: #003366;
   transform: scale(1.10);
 }
+
+/* Dark mode */
+body.dark-mode footer {
+  background-color: #1a1a1a;
+}
+
+  body.dark-mode .social-icons a:hover {
+    color: #f4d03f;
+  }
+
+  body.dark-mode .social-icons a {
+    color: #ffffff;
+  }

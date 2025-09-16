@@ -150,7 +150,6 @@ header.dark-mode {
   transform: scale(1.10);
 }
 
-
 .social-icons img.social-icon {
   width: 20px;
   height: 20px;
@@ -164,7 +163,7 @@ header.dark-mode {
   color: #003366;
   transform: scale(1.10);
 }
-
+/* Dark mode */
 
   footer.dark-mode {
     background-color: #1a1a1a;
@@ -251,8 +250,6 @@ header.dark-mode {
   text-overflow: ellipsis; /* se não couber, aparece "..." */
 }
 
-
-
 /* Resultados */
 .resultados-container {
   max-width: 900px;
@@ -302,33 +299,6 @@ header.dark-mode {
 .resultados-lista li .club-home.special,
 .resultados-lista li .club-away.special {
   font-weight: bold;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  background-color: #001f4d;
-  color: #f4d03f;
-  margin-top: 50px;
-}
-
-  /* Right Side */
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.login-link {
-  font-size: 1.2rem;
-  color: #f4d03f;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.login-link:hover {
-  color: white;
 }
 
 /* Dark Mode Button */

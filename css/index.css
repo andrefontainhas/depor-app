@@ -10,7 +10,6 @@ body {
   background-color: #ffffff;
   color: #1a1a1a;
   transition: background-color 0.3s ease, color 0.3s ease;
-  opacity: 0;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -315,14 +314,6 @@ header.dark-mode {
 
 @media (max-width: 768px) {
   .noticias-container { grid-template-columns: 1fr; }
-}
-
-/* ==================== FOOTER ==================== */
-footer {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  background-color: #001f4d;
-  color: #f4d03f;
 }
 
 /* ===== Social Icons ===== */

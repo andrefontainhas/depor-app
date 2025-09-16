@@ -78,7 +78,7 @@ header.scrolled {
 
 /* Resultados */
 .resultados-container {
-  max-width: 900px;
+  max-width: 800px;
   margin: 120px auto 50px auto; /* Considerando header fixo */
   padding: 0 20px;
 }
@@ -88,6 +88,10 @@ header.scrolled {
   text-align: center;
   color: #003366;
   margin-bottom: 20px;
+}
+
+.resultados-container h2 {
+  margin-top: 40px;
 }
 
 .resultados-lista li {
@@ -129,10 +133,11 @@ header.scrolled {
   font-weight: normal;
 }
 
-/* Destacar "Desportivo de Monção" */
+/* Destacar "Desportivo de Monção" sem itálico */
 .resultados-lista li .club-home.special,
 .resultados-lista li .club-away.special {
   font-weight: bold;
+  font-style: normal;
 }
 
 

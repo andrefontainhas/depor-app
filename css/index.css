@@ -11,9 +11,8 @@ body {
   color: #1a1a1a;
   transition: background-color 0.3s ease, color 0.3s ease;
   opacity: 0;
-  transition: opacity 0.6s ease;
   overflow-x: hidden; /* Remove scroll horizontal */
-  overflow-y: auto;   /* Mantém o scroll vertical se necessário */
+  overflow-y: auto;   /* Mantém scroll vertical */
 }
 
 body.page-loaded {
@@ -25,21 +24,7 @@ body.dark-mode {
   color: #f1f1f1;
 }
 
-body.dark-mode .hero {
-  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
-  color: #f1f1f1;
-}
-
-body.dark-mode .btn {
-  background-color: #f4d03f;
-  color: #001f4d;
-}
-
-body.dark-mode .btn:hover {
-  background-color: white;
-  color: #001f4d;
-}
-
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -70,13 +55,7 @@ header.dark-mode {
   width: auto;
 }
 
-/* Nav */
-.header-center ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
+/* Nav desktop */
 .main-nav {
   flex-grow: 1;
   text-align: center;
@@ -109,7 +88,7 @@ header.dark-mode {
   border-radius: 5px;
 }
 
-/* Right Side */
+/* Right side */
 .header-right {
   display: flex;
   align-items: center;
@@ -127,7 +106,7 @@ header.dark-mode {
   color: white;
 }
 
-/* Dark Mode Button */
+/* Dark mode toggle */
 #darkModeToggle {
   font-size: 1.2rem;
   background: none;
@@ -141,7 +120,7 @@ header.dark-mode {
   transform: rotate(20deg);
 }
 
-/* Burger menu */
+/* Hamburger menu */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -160,7 +139,6 @@ header.dark-mode {
   transition: all 0.3s ease;
 }
 
-/* Checkbox escondido */
 .menu-checkbox {
   display: none;
 }
@@ -178,10 +156,7 @@ header.dark-mode {
 }
 
 @keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-content,
@@ -191,7 +166,6 @@ header.dark-mode {
   text-align: center;
 }
 
-/* Títulos e botão */
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
@@ -225,15 +199,6 @@ header.dark-mode {
   overflow: hidden;
 }
 
-.slide:nth-of-type(1) img,
-.slide:nth-of-type(2) img,
-.slide:nth-of-type(3) img {
-  width: 50%;
-  height: auto;
-  max-width: none;
-  object-fit: contain;
-}
-
 .slider-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
@@ -247,7 +212,6 @@ header.dark-mode {
   align-items: center;
   justify-content: flex-start;
   padding-top: 30px;
-  padding-bottom: 0;
 }
 
 .slide img {
@@ -267,8 +231,6 @@ header.dark-mode {
   border-radius: 8px;
   max-width: 80%;
   text-align: center;
-  box-sizing: border-box;
-  word-wrap: break-word;
 }
 
 @media (max-width: 768px) {
@@ -309,17 +271,13 @@ header.dark-mode {
   max-width: 350px;
 }
 
-.noticia-card:hover {
-  transform: translateY(-5px);
-}
+.noticia-card:hover { transform: translateY(-5px); }
 
 .noticia-img {
   width: 100%;
   height: auto;
   max-height: 300px;
   object-fit: contain;
-  display: block;
-  margin: 0 auto;
 }
 
 .noticia-content {
@@ -343,17 +301,12 @@ header.dark-mode {
   color: #003366;
   font-weight: bold;
   font-size: 1.1rem;
-  transition: color 0.3s ease;
 }
 
-.noticia-link:hover {
-  color: #f4d03f;
-}
+.noticia-link:hover { color: #f4d03f; }
 
 @media (max-width: 768px) {
-  .noticias-container {
-    grid-template-columns: 1fr;
-  }
+  .noticias-container { grid-template-columns: 1fr; }
 }
 
 /* Footer */
@@ -362,34 +315,29 @@ footer {
   padding: 1.5rem 1rem;
   background-color: #001f4d;
   color: #f4d03f;
-  transition: background-color 0.3s ease;
 }
 
-footer .socials {
-  margin-top: 0.5rem;
-}
+footer .socials { margin-top: 0.5rem; }
 
 footer .socials a {
   margin: 0 10px;
   color: #f4d03f;
   font-weight: bold;
-  transition: color 0.3s;
   text-decoration: none;
 }
 
-footer .socials a:hover {
-  color: white;
-}
+footer .socials a:hover { color: white; }
 
 /* ==================== MENU HAMBURGER MOBILE ==================== */
 @media (max-width: 768px) {
+  .header-center { display: none; }
+
   #nav-list {
     position: fixed;
     top: 70px;
     right: 0;
     background-color: #001f4d;
     width: 220px;
-    max-width: 80%;
     height: 100vh;
     flex-direction: column;
     gap: 1.5rem;
@@ -401,10 +349,7 @@ footer .socials a:hover {
     overflow-y: auto;
   }
 
-  #nav-list li {
-    text-align: left;
-  }
-
+  #nav-list li { text-align: left; }
   #nav-list a {
     font-size: 1.2rem;
     padding: 0.5rem 0;
@@ -418,14 +363,12 @@ footer .socials a:hover {
     border-radius: 5px;
   }
 
-  /* Mostrar nav quando checkbox marcado */
+  /* Checkbox: mostrar nav quando marcado */
   .menu-checkbox:checked + .menu-toggle + #nav-list {
     transform: translateX(0);
   }
 
-  .main-nav {
-    display: block;
-  }
+  .menu-toggle { display: flex; }
 }
 
 /* ==================== DARK MODE ==================== */
@@ -434,97 +377,31 @@ body.dark-mode {
   color: #f1f1f1;
 }
 
-body.dark-mode header {
-  background-color: #1a1a1a;
-  color: #f1f1f1;
-}
+body.dark-mode header { background-color: #1a1a1a; color: #f1f1f1; }
+body.dark-mode .nav-link { color: #f1f1f1; }
+body.dark-mode .nav-link.active { background-color: #333; color: #f4d03f; }
+body.dark-mode .nav-link:hover { background-color: rgba(255,255,255,0.1); color: #f4d03f; }
 
-body.dark-mode .nav-link {
-  color: #f1f1f1;
-}
+body.dark-mode .btn { background-color: #f4d03f; color: #001f4d; }
+body.dark-mode .btn:hover { background-color: #fff; color: #001f4d; }
 
-body.dark-mode .nav-link.active {
-  background-color: #333333;
-  color: #f4d03f;
-}
+body.dark-mode .hero { background: linear-gradient(to right, #0f0f0f, #1a1a1a); color: #f1f1f1; }
+body.dark-mode .hero h1, body.dark-mode .hero p { color: #f4d03f; }
+body.dark-mode .hero-button-container .btn { background-color: #f4d03f; color: #001f4d; }
+body.dark-mode .hero-button-container .btn:hover { background-color: #fff; color: #001f4d; }
 
-body.dark-mode .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #f4d03f;
-}
+body.dark-mode .slide-caption { background-color: rgba(0,0,0,0.6); color: #f1f1f1; }
 
-body.dark-mode .btn {
-  background-color: #f4d03f;
-  color: #001f4d;
-}
+body.dark-mode .noticias { background-color: #1a1a1a; }
+body.dark-mode .noticia-card { background-color: #2a2a2a; }
+body.dark-mode .noticia-content h3 { color: #f4d03f; }
+body.dark-mode .noticia-content p { color: #f1f1f1; }
+body.dark-mode .noticia-link { color: #f4d03f; }
+body.dark-mode .noticia-link:hover { color: #fff; }
 
-body.dark-mode .btn:hover {
-  background-color: #ffffff;
-  color: #001f4d;
-}
-
-body.dark-mode .hero {
-  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
-  color: #f1f1f1;
-}
-
-body.dark-mode .hero h1,
-body.dark-mode .hero p {
-  color: #f4d03f;
-}
-
-body.dark-mode .hero-button-container .btn {
-  background-color: #f4d03f;
-  color: #001f4d;
-}
-
-body.dark-mode .hero-button-container .btn:hover {
-  background-color: #ffffff;
-  color: #001f4d;
-}
-
-body.dark-mode .slide-caption {
-  background-color: rgba(0,0,0,0.6);
-  color: #f1f1f1;
-}
-
-body.dark-mode .noticias {
-  background-color: #1a1a1a;
-}
-
-body.dark-mode .noticia-card {
-  background-color: #2a2a2a;
-}
-
-body.dark-mode .noticia-content h3 {
-  color: #f4d03f;
-}
-
-body.dark-mode .noticia-content p {
-  color: #f1f1f1;
-}
-
-body.dark-mode .noticia-link {
-  color: #f4d03f;
-}
-
-body.dark-mode .noticia-link:hover {
-  color: #ffffff;
-}
-
-body.dark-mode footer {
-  background-color: #1a1a1a;
-  color: #f1f1f1;
-}
-
-body.dark-mode footer .socials a {
-  color: #f1f1f1;
-  text-decoration: none;
-}
-
-body.dark-mode footer .socials a:hover {
-  color: #f4d03f;
-}
+body.dark-mode footer { background-color: #1a1a1a; color: #f1f1f1; }
+body.dark-mode footer .socials a { color: #f1f1f1; text-decoration: none; }
+body.dark-mode footer .socials a:hover { color: #f4d03f; }
 
 /* Scroll Animations */
 .scroll-animation {

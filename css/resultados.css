@@ -145,7 +145,6 @@ header.dark-mode {
   font-style: normal;
 }
 
-
   /* Footer */
 footer {
   text-align: center;
@@ -217,7 +216,7 @@ body.dark-mode footer {
     color: #ffffff;
   }
 
-  /* Right Side */
+/* ==================== HEADER RIGHT ==================== */
 .header-right {
   display: flex;
   align-items: center;
@@ -247,24 +246,6 @@ body.dark-mode footer {
 
 #darkModeToggle:hover {
   transform: rotate(20deg);
-}
-
-/* Burger menu */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.burger-icon {
-  width: 25px;
-  height: 3px;
-  background-color: #f4d03f;
-  transition: all 0.3s ease;
 }
 
 /* ================= DARK MODE ================= */

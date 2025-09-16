@@ -107,7 +107,7 @@ body {
   }
   
   .jogador-card {
-    background: linear-gradient(135deg, #001f4d, #003366);
+    background: linear-gradient(135deg, #324b70, #003366);
     color: white;
     padding: 1rem;
     border-radius: 15px;
@@ -120,7 +120,7 @@ body {
     transform: scale(1.10);
   }
   .jogador-card img:hover {
-    transform: scale(1.20);
+    transform: scale(1.10);
   }
   
   .jogador-card img {
@@ -153,11 +153,34 @@ body {
     color: #f4d03f;
     font-size: 1.2rem;
     transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;   /* remove o sublinhado */
   }
+
   
   .social-icons a:hover {
     color: white;
+    transform: scale(1.10);
   }
+
+  .social-icons .zerozero-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #f4d03f; /* cor inicial igual aos outros */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: filter 0.3s;
+  }
+
+  .social-icons a:hover .zerozero-icon {
+    filter: brightness(0.7);
+  } 
+
   
   /* Responsivo */
   @media (max-width: 768px) {

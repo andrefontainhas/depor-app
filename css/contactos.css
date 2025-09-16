@@ -30,34 +30,38 @@ header.main-header {
 
 /* Logo como botão home */
 header .logo {
-  height: 45px;
-  width: auto;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
+.home-button img {
+  height: 50px;
+  width: auto;
+}
 /* Nav central */
 .main-nav {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
 
 #nav-list {
   display: flex;
-  justify-content: center;
-  list-style: none;
   gap: 2rem;
+  list-style: none;
 }
 
 .nav-link {
-  text-decoration: none;
   color: #f4d03f;
+  text-decoration: none;
   font-weight: bold;
-  padding: 0.4rem 0.6rem;
+  padding: 0.5rem;
   transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: white;
-  background-color: rgba(0,0,0,0.2);
+  color: #001f4d;
+  background-color: #f4d03f;
   border-radius: 5px;
 }
 
@@ -99,15 +103,27 @@ header .logo {
 }
 
 .contactos-info a {
-  color: #001f4d;
   font-weight: bold;
   text-decoration: none;
 }
 
 .contactos-info a:hover {
-  color: #f4d03f;
+  color: #001f4d; /* cor dos links */
   text-decoration: underline;
 }
+
+.contactos-info a.normal-link {
+  color: inherit; /* herda a cor do texto */
+  font-weight: normal; /* opcional, se não quiser em bold */
+  text-decoration: none; /* opcional, remove sublinhado */
+}
+
+.contactos-info a.normal-link:hover {
+  color: #003366;
+  font-weight: bold; 
+}
+
+
 
 /* ================= MAPA ================= */
 .mapa-container {
@@ -169,6 +185,124 @@ footer p {
 
 #darkModeToggle:hover {
   transform: rotate(20deg);
+}
+/* ===== Social Icons ===== */
+.social-media {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.social-media h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #003366;
+  font-size: 1.2rem;
+  transition: color 0.3s, filter 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* remove sublinhado */
+}
+
+.social-icons a:hover {
+  color: #003366;
+  transform: scale(1.10);
+}
+
+
+.social-icons img.social-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 50%; /* opcional, para ficar redondo */
+  transition: filter 0.3s;
+}
+
+.social-icons a:hover img.social-icon {
+  color: #003366;
+  transform: scale(1.10);
+}
+
+
+/* ===== Club Info ===== */
+.club-info {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fdf6e3;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.club-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.club-info p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #444;
+}
+
+.club-info a {
+  color: #f4d03f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.club-info a:hover {
+  color: white;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .social-media h2,
+body.dark-mode .club-info h2 {
+  color: #f4d03f;
+}
+
+body.dark-mode .social-icons a {
+  color: #f4d03f;
+}
+
+body.dark-mode .social-icons a:hover {
+  color: white;
+}
+
+body.dark-mode .social-icons img.social-icon {
+  filter: brightness(0.9);
+}
+
+body.dark-mode .club-info {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .club-info p,
+body.dark-mode .club-info a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .club-info a:hover {
+  color: #f4d03f;
 }
 
 /* Search Bar */

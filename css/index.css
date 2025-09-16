@@ -246,7 +246,7 @@ body.dark-mode .search-bar {
 /* Hero section */
 .hero {
   position: relative;
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 2rem 2rem; /* topo 6rem, direita 2rem, inferior 2rem, esquerda 2rem */
   text-align: center;
   background: linear-gradient(to right, #003366, #0055aa);
   color: white;
@@ -265,10 +265,11 @@ body.dark-mode .search-bar {
 .hero-content,
 .hero-slider,
 .hero-button-container {
-  margin-bottom: 30px; /* espaço uniforme entre cada bloco */
-  text-align: center;   /* centraliza conteúdos */
+  margin-bottom: 0px;
+  text-align: center;
 }
 
+/* Títulos e botão */
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
@@ -284,7 +285,6 @@ body.dark-mode .search-bar {
   color: #003366;
   background-color: #f4d03f;
   border-radius: 5px;
-  text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
 }
@@ -292,23 +292,6 @@ body.dark-mode .search-bar {
 .hero-button-container .btn:hover {
   color: #f4d03f;
   background-color: #003366;
-}
-.btn {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #f4d03f;
-  color: #001f4d;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: white;
-  color: #001f4d;
 }
 
 /* Slider */
@@ -319,41 +302,56 @@ body.dark-mode .search-bar {
 .slider-viewport {
   overflow: hidden;
 }
+/* Reduz a segunda e terceira imagem do slider */
+.slide:nth-of-type(1) img,
+.slide:nth-of-type(2) img,
+.slide:nth-of-type(3) img {
+  width: 50%;        /* metade da largura do container */
+  height: auto;      /* mantém proporção */
+  max-width: none;   /* remove restrição de largura */
+  object-fit: contain;
+}
+
 
 .slider-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .slide {
   flex: 0 0 100%;
-  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  height: 480px; /* Altura ajustada para combinar com a Imagem 3 */
+  flex-direction: column;       /* empilha imagem + legenda verticalmente */
+  align-items: center;          /* centraliza horizontalmente */
+  justify-content: flex-start;
+  padding-top: 30px; /* aumenta espaço acima da imagem do slide */
+  padding-bottom: 0; /* remove espaço extra abaixo da imagem */
 }
 
 .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;                  /* usa largura real */
+  height: auto;                 /* usa altura real */
+  max-width: 100%;              /* não ultrapassa container */
+  max-height: none;             /* sem limite de altura */
   display: block;
+  object-fit: contain;          /* mantém proporção sem cortar */
+  margin-bottom: 10px;          /* espaço entre imagem e legenda */
 }
 
+/* Caption sempre abaixo da imagem */
 .slide-caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  z-index: 2;
   color: #fff;
   background-color: rgba(0,0,0,0.5);
   padding: 15px;
   border-radius: 8px;
   max-width: 80%;
+  text-align: center;
+  box-sizing: border-box;
+  word-wrap: break-word;
 }
 
+/* Botões do slider */
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -367,16 +365,17 @@ body.dark-mode .search-bar {
   z-index: 10;
 }
 
-.slider-btn.prev {
-  left: 10px;
-}
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
 
-.slider-btn.next {
-  right: 10px;
-}
+.slider-btn:hover { background: rgba(0,0,0,0.6); }
 
-.slider-btn:hover {
-  background: rgba(0,0,0,0.6);
+@media (max-width: 768px) {
+  .slide-caption {
+    max-width: 90%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }
 
 /* Seção Últimas Notícias */
@@ -414,10 +413,14 @@ body.dark-mode .search-bar {
 }
 
 .noticia-img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+  width: 100%;           /* ocupa toda a largura do card */
+  height: auto;          /* mantém proporção real */
+  max-height: 300px;     /* opcional: limita altura máxima */
+  object-fit: contain;   /* mantém proporção inteira, sem cortar */
+  display: block;
+  margin: 0 auto;
 }
+
 
 .noticia-content {
   padding: 1.5rem;

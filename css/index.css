@@ -262,9 +262,11 @@ body.dark-mode .search-bar {
   }
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
+.hero-content,
+.hero-slider,
+.hero-button-container {
+  margin-bottom: 30px; /* espaço uniforme entre cada bloco */
+  text-align: center;   /* centraliza conteúdos */
 }
 
 .hero h1 {
@@ -276,6 +278,21 @@ body.dark-mode .search-bar {
   font-size: 1.2rem;
 }
 
+.hero-button-container .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  color: #003366;
+  background-color: #f4d03f;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hero-button-container .btn:hover {
+  color: #f4d03f;
+  background-color: #003366;
+}
 .btn {
   display: inline-block;
   margin-top: 1.5rem;
@@ -360,87 +377,6 @@ body.dark-mode .search-bar {
 
 .slider-btn:hover {
   background: rgba(0,0,0,0.6);
-}
-
-/* Seção Próximos Jogos */
-.proximos-jogos {
-  padding: 3rem 2rem;
-  background-color: #ffffff;
-}
-
-.proximos-jogos h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: #003366;
-}
-
-#jogos-lista {
-  list-style: none;
-  padding: 0;
-  margin-top: 1.5rem;
-}
-
-#jogos-lista li {
-  background-color: #eeeeee;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s ease;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-#jogos-lista li:hover {
-  background-color: #f4d03f;
-}
-
-/* Adicionando overlay para melhorar a legibilidade do texto */
-#jogos-lista li::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
-  border-radius: 10px;
-  z-index: 1;
-}
-
-#jogos-lista .jogo-info {
-  position: relative;
-  z-index: 2; /* Coloca o conteúdo acima do overlay */
-  display: flex;
-  flex-direction: column;
-}
-
-#jogos-lista .jogo-info h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: #ffffff;
-}
-
-#jogos-lista .jogo-info p {
-  font-size: 1.1rem;
-  color: #ffffff;
-}
-
-#jogos-lista .jogo-info .jogo-data,
-#jogos-lista .jogo-info .jogo-hora {
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#jogos-lista .jogo-local {
-  font-size: 1.2rem;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 /* Seção Últimas Notícias */
@@ -535,6 +471,7 @@ footer .socials a {
   color: #f4d03f;
   font-weight: bold;
   transition: color 0.3s;
+  text-decoration: none; /* Remove sublinhado */
 }
 
 footer .socials a:hover {
@@ -630,4 +567,91 @@ body.dark-mode footer {
 
 body.dark-mode footer .socials a {
   color: #f1f1f1;
+}
+body.dark-mode .hero {
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  color: #f1f1f1;
+}
+
+body.dark-mode .hero h1,
+body.dark-mode .hero p {
+  color: #f4d03f; /* Títulos e textos do hero em amarelo */
+}
+
+body.dark-mode .hero-button-container .btn {
+  background-color: #f4d03f;
+  color: #001f4d;
+}
+
+body.dark-mode .hero-button-container .btn:hover {
+  background-color: #ffffff;
+  color: #001f4d;
+}
+
+body.dark-mode .slide-caption {
+  background-color: rgba(0,0,0,0.6); /* fundo das legendas mais escuro */
+  color: #f1f1f1;
+}
+body.dark-mode .noticias {
+  background-color: #1a1a1a;
+}
+body.dark-mode .noticias h2 {
+  color: #f4d03f; /* Amarelo para manter contraste com fundo escuro */
+}
+
+
+body.dark-mode .noticia-card {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .noticia-content h3 {
+  color: #f4d03f;
+}
+
+body.dark-mode .noticia-content p {
+  color: #f1f1f1;
+}
+
+body.dark-mode .noticia-link {
+  color: #f4d03f;
+}
+
+body.dark-mode .noticia-link:hover {
+  color: #ffffff;
+}
+body.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+body.dark-mode footer .socials a {
+  color: #f1f1f1;
+  text-decoration: none; /* Remove sublinhado */
+}
+
+body.dark-mode footer .socials a:hover {
+  color: #f4d03f;
+}
+body.dark-mode .btn {
+  background-color: #f4d03f;
+  color: #001f4d;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #ffffff;
+  color: #001f4d;
+}
+
+body.dark-mode .nav-link {
+  color: #f1f1f1;
+}
+
+body.dark-mode .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f4d03f;
+}
+
+body.dark-mode .nav-link.active {
+  color: #f4d03f;
+  background-color: #333333;
 }

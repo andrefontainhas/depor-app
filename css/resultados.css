@@ -141,12 +141,46 @@ header.scrolled {
 }
 
 
-/* Footer */
+  /* Footer */
 footer {
   text-align: center;
   padding: 1.5rem 1rem;
   background-color: #001f4d;
   color: #f4d03f;
+  transition: background-color 0.3s ease;
+}
+
+footer .socials {
+  margin-top: 0.5rem;
+}
+
+footer .socials a {
+  margin: 0 10px;
+  color: #f4d03f;
+  font-weight: bold;
+  transition: color 0.3s;
+  text-decoration: none; /* Remove sublinhado */
+}
+
+footer .socials a:hover {
+  color: white;
+  text-decoration: none; /* Garante que não aparece sublinhado ao passar o mouse */
+}
+
+/* Dark mode */
+body.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+body.dark-mode footer .socials a {
+  color: #f1f1f1;
+  text-decoration: none; /* Remove sublinhado no dark mode */
+}
+
+body.dark-mode footer .socials a:hover {
+  color: #f4d03f;
+  text-decoration: none; /* Remove sublinhado no hover do dark mode */
 }
 
 /* Responsivo */

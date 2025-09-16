@@ -179,6 +179,17 @@ header.dark-mode {
   justify-content: flex-start;
   padding-top: 30px;
 }
+
+/* Reduz a segunda e terceira imagem do slider */ 
+.slide:nth-of-type(1) img, 
+.slide:nth-of-type(2) img, 
+.slide:nth-of-type(3) img { 
+  width: 50%; /* metade da largura do container */ 
+  height: auto; /* mantém proporção */ 
+  max-width: none; /* remove restrição de largura */ 
+  object-fit: contain; 
+}
+
 .slide img { width: auto; max-width: 100%; object-fit: contain; margin-bottom: 10px; }
 .slide-caption {
   color: #fff;

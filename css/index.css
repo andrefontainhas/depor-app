@@ -374,30 +374,40 @@ footer {
 }
 
 /* ==================== RESPONSIVO MOBILE ==================== */
+/* Botão hamburger escondido no desktop */
+#menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #f4d03f;
+  cursor: pointer;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  #nav-list {
-    flex-direction: column;       /* menu em coluna */
+  #menu-toggle {
+    display: block; /* mostra o botão */
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 70px; /* altura do header */
+    left: 0;
+    width: 100%;
+    background-color: #001f4d;
+    display: none; /* escondido por padrão */
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
     padding: 1rem 0;
   }
 
-  #nav-list li { text-align: center; }
-
-  #nav-list a {
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
-    display: block;
-    color: #f4d03f;
+  .main-nav.open {
+    display: flex; /* aparece quando ativo */
   }
 
-  #nav-list a:hover,
-  #nav-list a.active {
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 5px;
-  }
-
-  .header-right {
-    gap: 0.5rem; /* diminui espaço em mobile */
+  #nav-list {
+    flex-direction: column;
+    gap: 1rem;
   }
 }

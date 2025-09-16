@@ -366,7 +366,7 @@ footer .socials a:hover { color: white; }
   /* Checkbox: mostrar nav quando marcado */
   .menu-checkbox:checked + .menu-toggle + #nav-list {
     transform: translateX(0);
-  }
+}
 
   .menu-toggle { display: flex; }
 }

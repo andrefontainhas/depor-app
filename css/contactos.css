@@ -129,7 +129,7 @@ header.dark-mode {
 .contactos-container h1 {
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
-  color: #003366;
+  color: #f9f9f9;
   text-align: center;
 }
 
@@ -299,14 +299,6 @@ body.dark-mode {
 body.dark-mode .social-media h2,
 body.dark-mode .club-info h2 {
   color: #f4d03f;
-}
-
-body.dark-mode .social-icons a:hover {
-  color: #f4d03f;
-}
-
-body.dark-mode .social-icons a {
-  color: white;
 }
 
 body.dark-mode .social-icons img.social-icon {

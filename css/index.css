@@ -70,27 +70,27 @@ body.dark-mode .noticia-content h3 {
 body.dark-mode .noticia-content p {
   color: #ccc;
 }
-body.dark-mode .noticia-link {
+body.dark-mode .noticia-link:hover {
   color: #f1c40f;
 }
-body.dark-mode .noticia-link:hover {
+body.dark-mode .noticia-link {
   color: #fff;
 }
 
 /* FOOTER */
 body.dark-mode footer {
   background-color: #1a1a1a;
-  color: #f1c40f;
+  color: #fff;
 }
 
 /* SOCIAL ICONS */
 body.dark-mode .social-media h2 {
   color: #f1c40f;
 }
-body.dark-mode .social-icons a {
+body.dark-mode .social-icons a:hover {
   color: #f1c40f;
 }
-body.dark-mode .social-icons a:hover {
+body.dark-mode .social-icons a {
   color: #fff;
 }
 

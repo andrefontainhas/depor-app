@@ -360,25 +360,20 @@ body.dark-mode .calendario-lista li .estadio {
   color: #cccccc;
 }
 
-/* Resultados */
-body.dark-mode .resultados-container h1,
-body.dark-mode .resultados-container h2 {
+/* Dark Mode - Data, Hora e Resultado a amarelo */
+body.dark-mode .jogo-data,
+body.dark-mode .golos,
+body.dark-mode .calendario-lista li > :nth-child(1),
+body.dark-mode .calendario-lista li > :nth-child(2) {
   color: #f4d03f;
 }
 
-body.dark-mode .resultados-lista li {
-  background-color: #1e1e1e;
-}
 
-body.dark-mode .jogo-data {
-  color: #f4d03f;
-}
 
 body.dark-mode .club-home,
 body.dark-mode .club-away {
   color: #f1f1f1;
 }
-
 /* Footer */
 body.dark-mode footer {
   background-color: #1a1a1a;

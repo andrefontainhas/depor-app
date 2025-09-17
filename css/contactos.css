@@ -151,7 +151,7 @@ header.dark-mode {
 }
 
 .contactos-info a {
-  font-weight: bold;
+  font-weight: none;
   text-decoration: none;
 }
 

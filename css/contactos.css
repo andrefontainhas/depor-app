@@ -129,7 +129,7 @@ header.dark-mode {
 .contactos-container h1 {
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
-  color: #f9f9f9;
+  color: #003366;
   text-align: center;
 }
 
@@ -147,7 +147,7 @@ header.dark-mode {
 }
 
 .contactos-info strong {
-  color: #ffffff;
+  color: #003366;
 }
 
 .contactos-info a {
@@ -162,7 +162,7 @@ header.dark-mode {
 
 .contactos-info a.normal-link {
   color: inherit; /* herda a cor do texto */
-  font-weight: normal; /* opcional, se não quiser em bold */
+  font-weight: bold; /* opcional, se não quiser em bold */
   text-decoration: none; /* opcional, remove sublinhado */
 }
 

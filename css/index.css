@@ -326,7 +326,7 @@ footer {
 }
 
 .social-icons a {
-  color: #f4d03f;
+  color: #fff;
   font-size: 1.2rem;
   transition: color 0.3s, filter 0.3s;
   display: flex;
@@ -336,7 +336,7 @@ footer {
 }
 
 .social-icons a:hover {
-  color: #ffffff;
+  color: #f4d03f;
   transform: scale(1.10);
 }
 
@@ -359,10 +359,10 @@ body.dark-mode footer {
   background-color: #1a1a1a;
 }
 
-  body.dark-mode .social-icons a:hover {
-    color: #f4d03f;
-  }
+body.dark-mode .social-icons a:hover {
+  color: #f4d03f;
+}
 
-  body.dark-mode .social-icons a {
-    color: #ffffff;
-  }
+body.dark-mode .social-icons a {
+  color: #ffffff;
+}

@@ -353,9 +353,10 @@ body.dark-mode .contactos-info strong {
 }
 
 body.dark-mode .contactos-info a {
-  font-weight: none;
+  color: inherit !important;
   text-decoration: none;
 }
+
 
 body.dark-mode .contactos-info a:hover {
   font-weight: bold;

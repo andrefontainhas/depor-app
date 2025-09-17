@@ -146,10 +146,6 @@ header.dark-mode {
   font-size: 1.05rem;
 }
 
-.contactos-info strong {
-  color: #003366;
-}
-
 .contactos-info a {
   font-weight: bold;
   text-decoration: none;
@@ -167,7 +163,6 @@ header.dark-mode {
 }
 
 .contactos-info a.normal-link:hover {
-  color: #003366;
   font-weight: bold; 
 }
 
